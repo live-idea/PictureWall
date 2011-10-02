@@ -1,0 +1,25 @@
+<h1>Listing puzzle_tables</h1>
+
+<table>
+  <tr>
+    <th>Category</th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @puzzle_tables.each do |puzzle_table| %>
+  <tr>
+    <td><%= puzzle_table.category_id %></td>
+    <td><%= puzzle_table.name %></td>
+    <td><%= link_to 'Show', puzzle_table %></td>
+    <td><%= link_to 'Edit', edit_puzzle_table_path(puzzle_table) %></td>
+    <td><%= link_to 'Destroy', puzzle_table, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Puzzle table', new_puzzle_table_path %>

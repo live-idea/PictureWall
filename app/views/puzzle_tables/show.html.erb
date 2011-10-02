@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @puzzle_table.category_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @puzzle_table.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_puzzle_table_path(@puzzle_table) %> |
+<%= link_to 'Back', puzzle_tables_path %>

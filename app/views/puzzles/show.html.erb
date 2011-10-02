@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @puzzle.user_id %>
+</p>
+
+<p>
+  <b>Canvas:</b>
+  <%= @puzzle.canvas_id %>
+</p>
+
+<p>
+  <b>Coord x:</b>
+  <%= @puzzle.coord_x %>
+</p>
+
+<p>
+  <b>Coord y:</b>
+  <%= @puzzle.coord_y %>
+</p>
+
+
+<%= link_to 'Edit', edit_puzzle_path(@puzzle) %> |
+<%= link_to 'Back', puzzles_path %>

@@ -1,0 +1,2 @@
+module PuzzleTablesHelper
+end

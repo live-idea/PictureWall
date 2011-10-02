@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  canvas_id: 1
+  coord_x: 1
+  coord_y: 1
+
+two:
+  user_id: 1
+  canvas_id: 1
+  coord_x: 1
+  coord_y: 1

@@ -1,0 +1,29 @@
+<h1>Listing puzzles</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Canvas</th>
+    <th>Coord x</th>
+    <th>Coord y</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @puzzles.each do |puzzle| %>
+  <tr>
+    <td><%= puzzle.user_id %></td>
+    <td><%= puzzle.canvas_id %></td>
+    <td><%= puzzle.coord_x %></td>
+    <td><%= puzzle.coord_y %></td>
+    <td><%= link_to 'Show', puzzle %></td>
+    <td><%= link_to 'Edit', edit_puzzle_path(puzzle) %></td>
+    <td><%= link_to 'Destroy', puzzle, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Puzzle', new_puzzle_path %>
