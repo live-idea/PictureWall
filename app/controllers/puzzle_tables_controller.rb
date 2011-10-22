@@ -25,7 +25,7 @@ class PuzzleTablesController < ApplicationController
   # GET /puzzle_tables/new.json
   def new
     @puzzle_table = PuzzleTable.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @puzzle_table }

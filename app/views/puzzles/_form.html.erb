@@ -1,4 +1,4 @@
-<%= form_for(@puzzle) do |f| %>
+<%= form_for([@puzzle.puzzle_table, @puzzle]) do |f| %>
   <% if @puzzle.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@puzzle.errors.count, "error") %> prohibited this puzzle from being saved:</h2>
@@ -11,22 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :canvas_id %><br />
-    <%= f.number_field :canvas_id %>
-  </div>
-  <div class="field">
-    <%= f.label :coord_x %><br />
-    <%= f.number_field :coord_x %>
-  </div>
-  <div class="field">
-    <%= f.label :coord_y %><br />
-    <%= f.number_field :coord_y %>
-  </div>
+ <div>
+   <%= f.label :image, "Photo" %>  
+   <%= f.file_field :image %>
+   <%= f.hidden_field :coord_x %>
+   <%= f.hidden_field :coord_y %>
+ </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

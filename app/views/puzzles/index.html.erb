@@ -1,29 +1,37 @@
-<h1>Listing puzzles</h1>
-
-<table>
-  <tr>
-    <th>User</th>
-    <th>Canvas</th>
-    <th>Coord x</th>
-    <th>Coord y</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @puzzles.each do |puzzle| %>
-  <tr>
-    <td><%= puzzle.user_id %></td>
-    <td><%= puzzle.canvas_id %></td>
-    <td><%= puzzle.coord_x %></td>
-    <td><%= puzzle.coord_y %></td>
-    <td><%= link_to 'Show', puzzle %></td>
-    <td><%= link_to 'Edit', edit_puzzle_path(puzzle) %></td>
-    <td><%= link_to 'Destroy', puzzle, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Puzzle', new_puzzle_path %>
+<div class="title"><%= @puzzle_table.category.name %></div>
+<%=render :partial => "puzzles", :locals => { :puzzle_table => @puzzle_table, :table => puzzles_to_table(@puzzles) }%>
+<div>
+  <h1>Comments</h1>
+  <ul>
+    <%  @puzzle_table.comments.each do |comment|%>
+      <li>
+        <div class="comment">
+          <p>
+            <%= comment.user.email %>
+            <p><%= comment.body %></p>
+            <p>
+              <small> posted on: <%= comment.created_at %> </small>
+            </p>
+          </p>  
+          <% if (current_user && current_user.admin)  %>
+              <%= link_to "Edit", edit_puzzle_table_comment_path(@puzzle_table, comment) %>
+              <%= link_to 'Destroy', [@puzzle_table, comment], confirm: 'Are you sure?', method: :delete %>
+            <%end%>
+        </div> 
+      </li>
+    <%end%>
+  </ul>
+  
+  <%= form_for([@puzzle_table, @puzzle_table.comments.new]) do |f| %>
+   
+  <div class="field">
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <%end%>
+  
+</div>
+<%= render "pretty_photo_config"  %>

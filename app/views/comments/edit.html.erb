@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Show', [@puzzle_table, @comment] %> 
+<%= link_to 'Back', puzzle_table_comments_path(@puzzle_table) %>

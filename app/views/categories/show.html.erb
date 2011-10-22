@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
+ <h3><%= @category.name %></h3>
+ <%= link_to 'Back to categories', categories_path %>
+<% @category.puzzle_tables.each do |puzzle_table|  %>
 
-<p>
-  <b>Status:</b>
-  <%= @category.status %>
-</p>
+<p><%= link_to puzzle_table.name, puzzle_table_puzzles_path(puzzle_table) %></p>
+
+  <%=render :partial => "table_preview", :locals => { :puzzle_table => puzzle_table }%>
+<%  end %>
 
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+
+

@@ -1,0 +1,16 @@
+<div class="table_preview">
+<table>
+ <tr>
+        <% puzzle_table.puzzles.rnd10.limit10.each do |puzzle| %>
+            <td class="puzzle">
+               <div class="block1">
+               <%if puzzle.image.exists?%>
+                  <%= link_to(image_tag(puzzle.image.url(:thumb)) , puzzle_table_puzzles_path(puzzle_table)) %>
+               <%end%>   
+             </div>
+            </td>
+        <%end%>
+ </tr>
+  
+</table>
+</div>

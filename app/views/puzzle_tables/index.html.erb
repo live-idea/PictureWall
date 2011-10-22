@@ -1,9 +1,8 @@
-<h1>Listing puzzle_tables</h1>
-
+<div id="table" class="table">
 <table>
   <tr>
     <th>Category</th>
-    <th>Name</th>
+    <th>Name table</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,7 +10,7 @@
 
 <% @puzzle_tables.each do |puzzle_table| %>
   <tr>
-    <td><%= puzzle_table.category_id %></td>
+    <td><%= puzzle_table.category.name %></td>
     <td><%= puzzle_table.name %></td>
     <td><%= link_to 'Show', puzzle_table %></td>
     <td><%= link_to 'Edit', edit_puzzle_table_path(puzzle_table) %></td>
@@ -19,7 +18,7 @@
   </tr>
 <% end %>
 </table>
-
+</div>
 <br />
 
 <%= link_to 'New Puzzle table', new_puzzle_table_path %>

@@ -12,7 +12,7 @@
     <h1></h1>
     <!-- header starts here -->
     <div id="header" class="header">
-      
+       <%= greetings %>
       <!-- user menu starts here -->
       <div id="usermenu" class="usermenu">
         <%=render "user_bar" %>
@@ -23,14 +23,15 @@
     
     <!--main content starts here -->
     <div id="main content" class="main content"'>
-         
+         <p class="notice"><%= notice %></p>
+         <p class="alert"><%= alert %></p>
+         <%= yield %>
     </div>
     <!--main content ends here -->
   </div>
   
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
+
+
 
 </body>
 </html>

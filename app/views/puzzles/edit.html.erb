@@ -1,6 +1,5 @@
-<h1>Editing puzzle</h1>
-
+<h1>Editing puzzle for table: <%= @puzzle.puzzle_table.name %></h1>
+<%= image_tag(@puzzle.image.url(:thumb))  %>
 <%= render 'form' %>
-
-<%= link_to 'Show', @puzzle %> |
-<%= link_to 'Back', puzzles_path %>
+<%= link_to 'Show', [@puzzle.puzzle_table, @puzzle] %> 
+<%= link_to 'Back', puzzle_table_puzzles_path(@puzzle_table) %>

@@ -1,15 +1,21 @@
 PictureWall::Application.routes.draw do
   devise_for :users
 
-  resources :puzzle_tables
+  resources :puzzle_tables do
+      resources :puzzles do
+        member do
+          post :like
+        end
+      end
+      resources :comments
+  end
+  
 
   resources :categories
 
-  resources :puzzles
 
-  resources :canvas
 
-  resources :comments
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -67,5 +73,5 @@ PictureWall::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-  root :to => "puzzle_tables#index"
+  root :to => "categories#index"
 end

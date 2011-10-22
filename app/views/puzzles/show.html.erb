@@ -5,10 +5,6 @@
   <%= @puzzle.user_id %>
 </p>
 
-<p>
-  <b>Canvas:</b>
-  <%= @puzzle.canvas_id %>
-</p>
 
 <p>
   <b>Coord x:</b>
@@ -21,5 +17,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_puzzle_path(@puzzle) %> |
-<%= link_to 'Back', puzzles_path %>
+<%= link_to 'Edit', edit_puzzle_table_puzzle_path(@puzzle_table,@puzzle) %> |
+<%= link_to 'Back', puzzle_table_puzzles_path(@puzzle_table) %>

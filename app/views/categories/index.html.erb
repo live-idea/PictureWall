@@ -1,24 +1,22 @@
 <h1>Listing categories</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Status</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= category.name %></td>
-    <td><%= category.status %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<ul>
+  <% @categories.each do |category| %>
+ 
+    
+  <li>
+    <div class="building-block">
+    <span><%= link_to category.name, category%></span>
+    <p><%=  category.status%></p>
+   
+    
+        <%=render :partial => "category_preview", :locals => { :category => category }%>
+      
+   
+    </div>
+  </li>
 <% end %>
-</table>
+</ul>
 
 <br />
 

@@ -7,3 +7,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function() {
+    $(".block1").bind({
+        mouseenter: function(event){
+         
+            $(".edit_link", this).show();
+        },
+        mouseleave:function(event){
+            $(".edit_link", this).hide();
+        }
+    }
+    );
+    //$("a[rel^='prettyPhoto']").prettyPhoto({
+    //   theme: 'dark_rounded'
+    //});
+});
