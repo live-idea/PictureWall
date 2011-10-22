@@ -9,4 +9,5 @@ module PuzzlesHelper
     end
     return table
   end
+ 
 end

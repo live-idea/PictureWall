@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111002095137) do
+ActiveRecord::Schema.define(:version => 20111016125521) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,11 @@ ActiveRecord::Schema.define(:version => 20111002095137) do
     t.datetime "updated_at"
   end
 
+  create_table "puzzle_likes", :force => true do |t|
+    t.string "user_id"
+    t.string "puzzle_id"
+  end
+
   create_table "puzzle_tables", :force => true do |t|
     t.integer  "category_id"
     t.string   "name"
@@ -42,11 +47,15 @@ ActiveRecord::Schema.define(:version => 20111002095137) do
 
   create_table "puzzles", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "canvas_id"
     t.integer  "coord_x"
     t.integer  "coord_y"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "puzzle_table_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "users", :force => true do |t|

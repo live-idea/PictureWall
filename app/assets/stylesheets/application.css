@@ -34,8 +34,31 @@
 }
 
 .building-block{
-    width: 400px;
+    border: 2px solid #E7E7E7;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 0 10px #000000;
+    float: left;
     height: 300px;
+    margin: 4px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+.building-block a {
+    color: #E3E3E3;
+    display: inline-block;
+    font: 800 1.4em/1.4em Verdana;
+    text-decoration: none;
+    width:100%;
+}
+
+.building-block a:hover {
+    background-color: #e6e6e6;
+}
+
+.pictures_list {
+    overflow: hidden;
+    padding: 10px;
 }
 
 .category_image_preview{
@@ -72,4 +95,81 @@
     position: absolute;
     top: 3px;
     right: 3px;
+}
+.like_link{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+.title {
+    border-radius: 37px 37px 37px 37px;
+    box-shadow: 2px 6px 13px #000000;
+    color: #003366;
+    font: 800 1.6em/1.4em Verdana;
+    text-align: center;
+}
+
+.user-bar {
+    color: #FFFFFF;
+    list-style: none outside none;
+}
+
+.user-bar li {
+    float:left;
+    margin:2px;
+    padding:4px;
+}
+
+.user-bar li a {
+    color:#fff;
+}
+
+.hello_user {
+    color: #E3E3E3;
+    float: left;
+    font: 800 1.4em/5em Arial;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.sign_in_content {
+    text-align:center;
+}
+
+form#user_new {
+    
+}
+
+form#user_new label {
+    margin-left: 10px;  
+    color: #999999; 
+}
+
+form#user_new .submit input {
+    width: auto;  
+    padding: 9px 15px;  
+    background: #617798;  
+    border: 0;  
+    font-size: 14px;  
+    color: #FFFFFF;
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+    margin-top:10px;
+}
+
+form#user_new input {
+    padding: 9px;  
+    border: solid 1px #E5E5E5;  
+    outline: 0;  
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;  
+    width: 200px;  
+    background: #FFFFFF;
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    
+}
+
+.register_title {
+    color: #999999;
+    font:100 1.4em/1.3em Arial;
 }

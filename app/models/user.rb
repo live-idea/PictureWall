@@ -10,4 +10,13 @@ class User < ActiveRecord::Base
   has_many :comments
   has_many :puzzle_likes
   
+  def liked_puzzle?(puzzle)
+    if (PuzzleLike.where(:user_id => self.id, :puzzle_id => puzzle.id).count > 0)
+      true
+      
+    else
+      false
+    end
+  end
+  
 end

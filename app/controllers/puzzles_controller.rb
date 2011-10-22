@@ -91,5 +91,5 @@ class PuzzlesController < ApplicationController
   def like
     PuzzleLike.find_or_create_by_user_id_and_puzzle_id(current_user.id, params[:id])
     render :json => {:success => true}
-  end
+    end
 end

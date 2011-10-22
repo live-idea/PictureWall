@@ -7,12 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <!-- wrapper starts here -->
-  <div class="wrapper">
-    <h1></h1>
     <!-- header starts here -->
     <div id="header" class="header">
-       <%= greetings %>
+      <div class="hello_user"> 
+        <%= greetings %>
+      </div>
       <!-- user menu starts here -->
       <div id="usermenu" class="usermenu">
         <%=render "user_bar" %>
@@ -20,7 +19,8 @@
       <!-- user menu ends here -->
     </div>
     <!-- header ends here -->
-    
+     <!-- wrapper starts here -->
+  <div class="wrapper">
     <!--main content starts here -->
     <div id="main content" class="main content"'>
          <p class="notice"><%= notice %></p>

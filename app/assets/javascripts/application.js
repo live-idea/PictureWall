@@ -13,9 +13,11 @@ $(document).ready(function() {
         mouseenter: function(event){
          
             $(".edit_link", this).show();
+            $(".like_link", this).show();
         },
         mouseleave:function(event){
             $(".edit_link", this).hide();
+            $(".like_link", this).hide();
         }
     }
     );
@@ -23,3 +25,4 @@ $(document).ready(function() {
     //   theme: 'dark_rounded'
     //});
 });
+

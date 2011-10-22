@@ -1,0 +1,44 @@
+(in d:/projects/PictureWall)
+         new_user_session GET    /users/sign_in(.:format)                                    {:action=>"new", :controller=>"devise/sessions"}
+             user_session POST   /users/sign_in(.:format)                                    {:action=>"create", :controller=>"devise/sessions"}
+     destroy_user_session DELETE /users/sign_out(.:format)                                   {:action=>"destroy", :controller=>"devise/sessions"}
+            user_password POST   /users/password(.:format)                                   {:action=>"create", :controller=>"devise/passwords"}
+        new_user_password GET    /users/password/new(.:format)                               {:action=>"new", :controller=>"devise/passwords"}
+       edit_user_password GET    /users/password/edit(.:format)                              {:action=>"edit", :controller=>"devise/passwords"}
+                          PUT    /users/password(.:format)                                   {:action=>"update", :controller=>"devise/passwords"}
+ cancel_user_registration GET    /users/cancel(.:format)                                     {:action=>"cancel", :controller=>"devise/registrations"}
+        user_registration POST   /users(.:format)                                            {:action=>"create", :controller=>"devise/registrations"}
+    new_user_registration GET    /users/sign_up(.:format)                                    {:action=>"new", :controller=>"devise/registrations"}
+   edit_user_registration GET    /users/edit(.:format)                                       {:action=>"edit", :controller=>"devise/registrations"}
+                          PUT    /users(.:format)                                            {:action=>"update", :controller=>"devise/registrations"}
+                          DELETE /users(.:format)                                            {:action=>"destroy", :controller=>"devise/registrations"}
+ like_puzzle_table_puzzle POST   /puzzle_tables/:puzzle_table_id/puzzles/:id/like(.:format)  {:action=>"like", :controller=>"puzzles"}
+     puzzle_table_puzzles GET    /puzzle_tables/:puzzle_table_id/puzzles(.:format)           {:action=>"index", :controller=>"puzzles"}
+                          POST   /puzzle_tables/:puzzle_table_id/puzzles(.:format)           {:action=>"create", :controller=>"puzzles"}
+  new_puzzle_table_puzzle GET    /puzzle_tables/:puzzle_table_id/puzzles/new(.:format)       {:action=>"new", :controller=>"puzzles"}
+ edit_puzzle_table_puzzle GET    /puzzle_tables/:puzzle_table_id/puzzles/:id/edit(.:format)  {:action=>"edit", :controller=>"puzzles"}
+      puzzle_table_puzzle GET    /puzzle_tables/:puzzle_table_id/puzzles/:id(.:format)       {:action=>"show", :controller=>"puzzles"}
+                          PUT    /puzzle_tables/:puzzle_table_id/puzzles/:id(.:format)       {:action=>"update", :controller=>"puzzles"}
+                          DELETE /puzzle_tables/:puzzle_table_id/puzzles/:id(.:format)       {:action=>"destroy", :controller=>"puzzles"}
+    puzzle_table_comments GET    /puzzle_tables/:puzzle_table_id/comments(.:format)          {:action=>"index", :controller=>"comments"}
+                          POST   /puzzle_tables/:puzzle_table_id/comments(.:format)          {:action=>"create", :controller=>"comments"}
+ new_puzzle_table_comment GET    /puzzle_tables/:puzzle_table_id/comments/new(.:format)      {:action=>"new", :controller=>"comments"}
+edit_puzzle_table_comment GET    /puzzle_tables/:puzzle_table_id/comments/:id/edit(.:format) {:action=>"edit", :controller=>"comments"}
+     puzzle_table_comment GET    /puzzle_tables/:puzzle_table_id/comments/:id(.:format)      {:action=>"show", :controller=>"comments"}
+                          PUT    /puzzle_tables/:puzzle_table_id/comments/:id(.:format)      {:action=>"update", :controller=>"comments"}
+                          DELETE /puzzle_tables/:puzzle_table_id/comments/:id(.:format)      {:action=>"destroy", :controller=>"comments"}
+            puzzle_tables GET    /puzzle_tables(.:format)                                    {:action=>"index", :controller=>"puzzle_tables"}
+                          POST   /puzzle_tables(.:format)                                    {:action=>"create", :controller=>"puzzle_tables"}
+         new_puzzle_table GET    /puzzle_tables/new(.:format)                                {:action=>"new", :controller=>"puzzle_tables"}
+        edit_puzzle_table GET    /puzzle_tables/:id/edit(.:format)                           {:action=>"edit", :controller=>"puzzle_tables"}
+             puzzle_table GET    /puzzle_tables/:id(.:format)                                {:action=>"show", :controller=>"puzzle_tables"}
+                          PUT    /puzzle_tables/:id(.:format)                                {:action=>"update", :controller=>"puzzle_tables"}
+                          DELETE /puzzle_tables/:id(.:format)                                {:action=>"destroy", :controller=>"puzzle_tables"}
+               categories GET    /categories(.:format)                                       {:action=>"index", :controller=>"categories"}
+                          POST   /categories(.:format)                                       {:action=>"create", :controller=>"categories"}
+             new_category GET    /categories/new(.:format)                                   {:action=>"new", :controller=>"categories"}
+            edit_category GET    /categories/:id/edit(.:format)                              {:action=>"edit", :controller=>"categories"}
+                 category GET    /categories/:id(.:format)                                   {:action=>"show", :controller=>"categories"}
+                          PUT    /categories/:id(.:format)                                   {:action=>"update", :controller=>"categories"}
+                          DELETE /categories/:id(.:format)                                   {:action=>"destroy", :controller=>"categories"}
+                     root        /                                                           {:controller=>"categories", :action=>"index"}
