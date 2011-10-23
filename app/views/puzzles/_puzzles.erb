@@ -18,9 +18,11 @@
                 <div class="like_link" style="display:none">
                   <%= link_to 'Like', like_puzzle_table_puzzle_path(puzzle_table,puzzle), :method => :post, :remote => true, :class => "like-puzzle" %>
                 </div>
+                <div class="heart">
                 <%if current_user && current_user.liked_puzzle?(puzzle)%>
                 <%= image_tag "heart.png",:remote => true %>
                 <%end%>
+                </div>
               </div>
 
             <%else%>

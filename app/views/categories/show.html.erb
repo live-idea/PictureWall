@@ -3,10 +3,11 @@
  <h3><%= @category.name %></h3>
  <%= link_to 'Back to categories', categories_path %>
 <% @category.puzzle_tables.each do |puzzle_table|  %>
-
-<p><%= link_to puzzle_table.name, puzzle_table_puzzles_path(puzzle_table) %></p>
+ <div class="preview_item">
+  <%= link_to puzzle_table.name, puzzle_table_puzzles_path(puzzle_table) %>
 
   <%=render :partial => "table_preview", :locals => { :puzzle_table => puzzle_table }%>
+ </div>
 <%  end %>
 
 <%  if(current_user && current_user.admin) %>

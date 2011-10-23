@@ -39,7 +39,7 @@
     box-shadow: 0 0 10px #000000;
     float: left;
     height: 300px;
-    margin: 4px;
+    margin: 18px;
     overflow: hidden;
     width: 300px;
     text-align: center;
@@ -100,6 +100,11 @@
     position: absolute;
     top: 3px;
     left: 3px;
+}
+
+.heart{
+     position: absolute;
+     
 }
 
 .title {
@@ -172,4 +177,23 @@ form#user_new input {
 .register_title {
     color: #999999;
     font:100 1.4em/1.3em Arial;
+}
+
+.preview_item{
+    background-color: #545658;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 2px 6px 13px #000000;
+    padding: 4px;
+}
+
+.preview_item a{
+    color: #FFFFFF;
+    display: block;
+    font: 100 1.8em Verdana;
+    text-align: center;
+    text-decoration: none;
+}
+.preview_item a:hover{
+     background-color: #545658;
+     
 }
