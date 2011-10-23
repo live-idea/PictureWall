@@ -9,6 +9,7 @@
   <%=render :partial => "table_preview", :locals => { :puzzle_table => puzzle_table }%>
 <%  end %>
 
-
-
+<%  if(current_user && current_user.admin) %>
+  <%= link_to 'New Puzzle Table ', new_puzzle_table_path %>
+<%end%>
 

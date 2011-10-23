@@ -12,10 +12,14 @@
       
    
     </div>
-
+   
 <% end %>
 </div>
 
 <div class="dashboard">
-<%= link_to 'New Category', new_category_path %>
+  <% if (current_user && current_user.admin)  %>
+    <%= link_to 'New Category', new_category_path %>
+    
+  <%end%>
+
 </div>

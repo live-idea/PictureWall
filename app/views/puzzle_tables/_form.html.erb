@@ -13,11 +13,19 @@
 
   <div class="field">
     <%= f.label :category_id %><br />
-    <%= f.number_field :category_id %>
+    <%= f.text_field :category_id %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
+  </div>
+<div class="field">
+    <%= f.label :width %><br />
+    <%= f.number_field :width %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br />
+    <%= f.number_field :height %><br />
   </div>
   <div class="actions">
     <%= f.submit %>

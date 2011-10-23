@@ -12,8 +12,7 @@ class User < ActiveRecord::Base
   
   def liked_puzzle?(puzzle)
     if (PuzzleLike.where(:user_id => self.id, :puzzle_id => puzzle.id).count > 0)
-      true
-      
+      true    
     else
       false
     end
