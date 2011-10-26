@@ -1,4 +1,4 @@
-<div class="title"><%= @puzzle_table.category.name %></div>
+<div class="title"><%= @puzzle_table.name %></div>
 <%=render :partial => "puzzles", :locals => { :puzzle_table => @puzzle_table, :table => puzzles_to_table(@puzzles) }%>
 <div>
   <h1>Comments</h1>
